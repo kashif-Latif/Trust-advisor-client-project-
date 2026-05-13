@@ -450,8 +450,12 @@ function HeroSection({ scrollTo }: { scrollTo: (href: string) => void }) {
           </div>
         </motion.div>
       </div>
-      <motion.div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10" animate={{ y: [0, 10, 0] }} transition={{ duration: 2, repeat: Infinity }}>
-        <div className="w-6 h-10 border-2 border-white/40 rounded-full flex justify-center pt-2"><div className="w-1.5 h-3 bg-gold rounded-full" /></div>
+      <motion.div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2" animate={{ y: [0, 10, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+        <span className="text-white/60 text-[10px] tracking-[0.2em] uppercase font-medium">Scroll</span>
+        <div className="flex flex-col items-center">
+          <ChevronRight className="w-5 h-5 text-gold rotate-90" />
+          <ChevronRight className="w-5 h-5 text-gold/50 rotate-90 -mt-2" />
+        </div>
       </motion.div>
     </section>
   )
@@ -660,7 +664,7 @@ function TestimonialsSection() {
 function ContactSection() {
   return (
     <section id="contact" className="py-16 md:py-24 bg-navy relative overflow-hidden">
-      <div className="absolute -top-1/2 -right-[20%] w-[600px] h-[600px] bg-soft-blue/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -top-1/2 -right-[10%] w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] bg-soft-blue/10 rounded-full blur-3xl pointer-events-none" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <FadeInWhenVisible>
           <div className="text-center mb-12 md:mb-16">
@@ -821,7 +825,7 @@ export default function Home() {
   const handleCallOpen = useCallback(() => setCallOpen(true), [])
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col overflow-x-hidden">
       <HeaderSection
         scrolled={scrolled}
         activeSection={activeSection}
@@ -854,7 +858,7 @@ export default function Home() {
       {/* Floating WhatsApp Button - Right Bottom */}
       <a href="https://wa.me/923214307908" target="_blank" rel="noopener noreferrer" className="fixed bottom-5 right-5 z-40 w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#1da851] text-white shadow-lg flex items-center justify-center transition-all hover:scale-110 group" aria-label="Chat on WhatsApp">
         <MessageCircle className="w-7 h-7" />
-        <span className="absolute right-full mr-3 bg-white text-navy text-xs font-semibold px-3 py-1.5 rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Chat on WhatsApp</span>
+        <span className="absolute right-full mr-3 bg-white text-navy text-xs font-semibold px-3 py-1.5 rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none hidden sm:block">Chat on WhatsApp</span>
       </a>
 
       {/* =================== POPUPS =================== */}

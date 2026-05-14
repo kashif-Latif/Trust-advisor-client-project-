@@ -48,20 +48,19 @@ import {
 
 const PHONE_NUMBERS = [
   { name: 'Azam Mushtaq', number: '0321-4307908', raw: '+923214307908' },
-  { name: 'M. Imran Nusrat', number: '0321-8883635', raw: '+93218883635' },
 ]
 
 const SOCIAL_LINKS = [
   {
     name: 'Facebook',
     icon: Facebook,
-    url: 'https://facebook.com/TrustMarkRealEstate',
+    url: 'https://www.facebook.com/share/1GJaEqUXNq/',
     color: '#1877F2',
   },
   {
     name: 'Instagram',
     icon: Instagram,
-    url: 'https://instagram.com/trustmarkrealestate',
+    url: 'https://www.instagram.com/muhammad.azam.92798072?utm_source=qr&igsh=MXVqOGUwczNud2l3Mw==',
     color: '#E4405F',
   },
   {
@@ -71,13 +70,13 @@ const SOCIAL_LINKS = [
         <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.98a8.22 8.22 0 004.76 1.52V7.05a4.83 4.83 0 01-1-.36z" />
       </svg>
     ),
-    url: 'https://tiktok.com/@trustmarkrealestate',
+    url: 'https://www.tiktok.com/@user12554205627676?_r=1&_t=ZS-96LaMmrMFVt',
     color: '#010101',
   },
   {
     name: 'YouTube',
     icon: Youtube,
-    url: 'https://youtube.com/@TrustMarkRealEstateAdvisor',
+    url: 'https://www.youtube.com/@MNAJMI1978',
     color: '#FF0000',
   },
 ]
@@ -564,20 +563,11 @@ function AboutUsSection() {
         <FadeInWhenVisible><SectionTitle>About Us</SectionTitle></FadeInWhenVisible>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           <FadeInWhenVisible direction="left">
-            <div className="grid grid-cols-2 gap-4 md:gap-6">
-              <div className="relative rounded-2xl overflow-hidden shadow-lg group">
-                <img src="/images/ceo-azam-mushtaq.jpeg" alt="Azam Mushtaq - Founder & CEO" className="w-full h-52 sm:h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy/90 to-transparent p-4">
-                  <p className="text-white font-bold text-sm md:text-base" style={{ fontFamily: 'var(--font-playfair)' }}>Azam Mushtaq</p>
-                  <p className="text-gold text-xs md:text-sm">Founder &amp; CEO</p>
-                </div>
-              </div>
-              <div className="relative rounded-2xl overflow-hidden shadow-lg group">
-                <img src="/images/ceo-imran-nusrat.jpeg" alt="M. Imran Nusrat - Founder & CEO" className="w-full h-52 sm:h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy/90 to-transparent p-4">
-                  <p className="text-white font-bold text-sm md:text-base" style={{ fontFamily: 'var(--font-playfair)' }}>M. Imran Nusrat</p>
-                  <p className="text-gold text-xs md:text-sm">Founder &amp; CEO</p>
-                </div>
+            <div className="relative rounded-2xl overflow-hidden shadow-lg group w-full">
+              <img src="/images/ceo-azam-mushtaq.jpeg" alt="Azam Mushtaq - Founder & CEO" className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy/90 to-transparent p-5">
+                <p className="text-white font-bold text-lg md:text-xl" style={{ fontFamily: 'var(--font-playfair)' }}>Azam Mushtaq</p>
+                <p className="text-gold text-sm md:text-base">Founder &amp; CEO</p>
               </div>
             </div>
           </FadeInWhenVisible>
@@ -699,7 +689,7 @@ function ContactSection() {
                   <a key={s.name} href={s.url} target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-1 sm:gap-1.5 rounded-lg sm:rounded-xl px-2 py-2.5 sm:px-5 sm:py-4 md:rounded-2xl text-white transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl" style={{ background: s.color }}>
                     <s.icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8" />
                     <span className="font-semibold text-[10px] sm:text-xs md:text-sm">{s.name}</span>
-                    <small className="text-[8px] sm:text-[9px] md:text-xs opacity-80 hidden sm:block">{s.name === 'Facebook' ? 'Trust Mark Real Estate' : s.name === 'Instagram' ? '@trustmarkrealestate' : s.name === 'TikTok' ? '@trustmarkrealestate' : 'Trust Mark Real Estate'}</small>
+                    <small className="text-[8px] sm:text-[9px] md:text-xs opacity-80 hidden sm:block">{s.name === 'Facebook' ? 'Azam Mushtaq Najmi' : s.name === 'Instagram' ? '@muhammad.azam' : s.name === 'TikTok' ? '@user12554205627676' : '@MNAJMI1978'}</small>
                   </a>
                 ))}
               </div>
